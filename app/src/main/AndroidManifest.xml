@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="li.dic.tourphone">
+
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CAMERA2" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name=".data.App"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_tourphone_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_tourphone_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TourPhone"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <uses-library android:name="com.google.android.things" android:required="false" />
+
+        <activity
+            android:name=".presentation.gid.GidExcursionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.tourist.TouristExcursionActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.bridgefy.sdk.API_KEY"
+            android:value="48c35a4d-a726-4b5e-8b8f-71511eb5ab89" />
+
+        <activity
+            android:name=".presentation.tourist.TouristActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TourPhone" />
+        <activity
+            android:name=".presentation.auth.AuthActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TourPhone"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".presentation.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="tourphone.ru" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".presentation.gid.GidActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TourPhone" />
+
+        <service
+            android:name=".domain.player.PlayerService"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".domain.mic.RecordService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="microphone" />
+    </application>
+</manifest>

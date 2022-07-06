@@ -1,0 +1,54 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.TourPhone" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/main</item>
+        <item name="colorPrimaryVariant">@color/main2</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:windowFullscreen">false</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/main</item>
+        <!-- Customize your theme here. -->
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+    </style>
+
+    <style name="Theme.SplashTheme" parent="Theme.TourPhone">
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/splash_status_bar</item>
+    </style>
+
+    <style name="switchTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Active thumb color & Active track color(30% transparency) -->
+        <item name="colorControlActivated">#5291CD</item>
+        <!-- Inactive thumb color -->
+        <item name="colorSwitchThumbNormal">#979DAC</item>
+        <!-- Inactive track color(30% transparency) -->
+        <item name="android:colorForeground">#FFFFFF</item>
+    </style>
+
+    <style name="edittextTheme" parent="Widget.Design.TextInputLayout">
+        <item name="colorAccent">#5291CD</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="boxBackgroundMode">outline</item>
+    </style>
+
+    <style name="volumeOff" parent="ShapeAppearanceOverlay.Material3.FloatingActionButton">
+        <item name="srcCompat">@drawable/ic_round_volume_off_24</item>
+    </style>
+
+    <style name="volumeUp" parent="ShapeAppearanceOverlay.Material3.FloatingActionButton">
+        <item name="srcCompat">@drawable/ic_round_volume_up_24</item>
+    </style>
+
+    <style name="MyThemeOverlay.MaterialComponents.MaterialAlertDialog" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.Dialog.Rounded
+        </item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MyApp.Dialog.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
+</resources>

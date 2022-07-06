@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Турфон</string>
+    <string name="api_url">http://api.tourphone.com:1077/</string>
+    <string name="auth">Авторизация</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="forget_password">Забыли пароль?</string>
+    <string name="enter">Войти</string>
+    <string name="registration">Регистрация</string>
+    <string name="need_help">Нужна помощь?</string>
+    <string name="surname">Фамилия</string>
+    <string name="name">Имя</string>
+    <string name="organization">Организация</string>
+    <string name="next">Дальше</string>
+    <string name="phone">Телефон</string>
+    <string name="email">Email</string>
+    <string name="register">Зарегистрироваться</string>
+    <string name="save_password">Запомнить пароль</string>
+    <string name="thx_for_register">Спасибо за регистрацию.  Наш менеджер свяжется с вами.</string>
+    <string name="enable_bt">Включите Bluetooth</string>
+    <string name="enable_wifi">Включите WiFi</string>
+    <string name="gid">Гид</string>
+    <string name="tourist">Турист</string>
+    <string name="scan_qr_code">Для начала экскурсии отсканируйте QR-Code</string>
+    <string name="enter_code">Ввести код</string>
+    <string name="enter_to_last">Подключиться к прошлой экскурсии</string>
+    <string name="excursion">Экскурсия</string>
+    <string name="plan_excursion">План экскурсий</string>
+    <string name="enter_code_dialog">Введите код для подключения к трансляции</string>
+    <string name="code">Код</string>
+    <string name="enable_headphones">Подключите гарнитуру</string>
+    <string name="info1">Приложение TourPhone не расходует интернет-трафик.  Приятной экскурсии!</string>
+    <string name="enter_all">Заполните все поля!</string>
+    <string name="error_auth">Не удалось войти</string>
+    <string name="error_code">Неверный код</string>
+    <string name="error_update">Не удалось обновить страницу экскурсии</string>
+    <string name="error_permission">Разрешения не предоставлены</string>
+    <string name="need_permission">Дальнейшая работа возможна только после предоставления разрешений</string>
+    <string name="get_permission">Предоставить разрешение</string>
+</resources>

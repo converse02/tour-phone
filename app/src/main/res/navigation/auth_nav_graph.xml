@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_navigation"
+    app:startDestination="@id/authStartFragment">
+
+    <fragment
+        android:id="@+id/authStartFragment"
+        android:name="li.dic.tourphone.presentation.auth.fragments.AuthStartFragment"
+        android:label="authStartFragment"
+        tools:layout="@layout/auth_start_fragment">
+        <action
+            android:id="@+id/action_auth_start_fragment_to_auth_enter_fragment"
+            app:destination="@id/authEnterFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/authEnterFragment"
+        android:name="li.dic.tourphone.presentation.auth.fragments.AuthEnterFragment"
+        android:label="authEnterFragment"
+        tools:layout="@layout/auth_enter_fragment">
+        <action
+            android:id="@+id/action_auth_enter_fragment_to_auth_register1_fragment"
+            app:destination="@id/authRegister1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/authRegister1Fragment"
+        android:name="li.dic.tourphone.presentation.auth.fragments.AuthRegister1Fragment"
+        tools:layout="@layout/auth_register1_fragment">
+        <action
+            android:id="@+id/action_auth_register1_fragment_to_auth_register2_fragment"
+            app:destination="@id/authRegister2Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/authRegister2Fragment"
+        android:name="li.dic.tourphone.presentation.auth.fragments.AuthRegister2Fragment"
+        tools:layout="@layout/auth_register2_fragment">
+        <action
+            android:id="@+id/action_auth_register2_fragment_to_auth_register3_fragment"
+            app:destination="@id/authRegister3Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/authRegister3Fragment"
+        android:name="li.dic.tourphone.presentation.auth.fragments.AuthRegister3Fragment"
+        tools:layout="@layout/auth_register3_fragment">
+        <action
+            android:id="@+id/action_auth_register3_fragment_to_auth_register_finished_fragment"
+            app:destination="@id/authRegisterFinishedFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/authRegisterFinishedFragment"
+        android:name="li.dic.tourphone.presentation.auth.fragments.AuthRegisterFinishedFragment"
+        tools:layout="@layout/auth_register_finished_fragment" />
+</navigation>

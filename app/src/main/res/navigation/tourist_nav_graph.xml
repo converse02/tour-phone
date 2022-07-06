@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tourist_navigation"
+    app:startDestination="@id/ExcursionListenerFragment">
+
+    <fragment
+        android:id="@+id/ExcursionListenerFragment"
+        android:name="li.dic.tourphone.presentation.tourist.TouristExcursionFragment"
+        android:label="excursionListenerFragment"
+        tools:layout="@layout/excursion_listener_fragment" />
+
+    <fragment
+        android:id="@+id/TouristChatFragment"
+        android:name="li.dic.tourphone.presentation.tourist.TouristChatFragment"
+        android:label="touristChatFragment"
+        tools:layout="@layout/tourist_chat_fragment" />
+
+o</navigation>
